@@ -52,7 +52,7 @@ gulp.task('javascript', function() {
 gulp.task('watch', function() {
     browserSync.init({
         open: 'external',
-        proxy: 'http://localhost:8888/newwp/',
+        proxy: 'http://localhost/wp-workflow/',
         port: 8080
     });
     gulp.watch([root + '**/*.css', root + '**/*.scss' ], ['css']);
