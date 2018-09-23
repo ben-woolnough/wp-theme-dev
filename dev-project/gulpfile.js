@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     jshint = require('gulp-jshint');
     concat = require('gulp-concat'),
-  uglify   = require('gulp-uglify'),
+    uglify = require('gulp-uglify'),
  
     // Only work with new or updated files
     newer = require('gulp-newer'),
@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     root = '../' + themename + '/',
     scss = root + 'sass/',
     js = root + 'js/',
-  srcjs = root + 'srcjs/',
+    srcjs = root + 'srcjs/',
     languages = root + 'languages/';
  
  
