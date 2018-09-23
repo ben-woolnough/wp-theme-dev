@@ -160,7 +160,7 @@ require get_template_directory() . '/inc/widgets.php';
 /**
  * Bootstrap Navwalker File.
  */
-require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
+require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
 /**
  * Load Jetpack compatibility file.
