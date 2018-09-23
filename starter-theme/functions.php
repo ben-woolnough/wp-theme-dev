@@ -103,6 +103,15 @@ function starter_theme_content_width() {
 }
 add_action( 'after_setup_theme', 'starter_theme_content_width', 0 );
 
+// include custom jQuery
+function starter_theme_include_custom_jquery() {
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, false);
+	}
+}
+add_action('init', 'starter_theme_include_custom_jquery');
+
 /**
  * Enqueue scripts and styles.
  */
