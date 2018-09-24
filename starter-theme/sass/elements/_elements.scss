@@ -19,6 +19,37 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+.site-info {
+	text-align: center;
+}
+
+h1.site-title,
+p.site-title {
+	margin: 10px 0 0 -2px;
+	padding: 0;
+	line-height: 1em;
+	font-size: 30px;
+	letter-spacing: 1px;
+}
+
+.site-title a {
+	margin: 0;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.site-description {
+	font-size: 16px;
+	margin: 10px 0 0;
+	letter-spacing: 1px;
+}
+
+#masthead {
+	margin-bottom: 30px;
+}
+
 @import "lists";
 
 img {
@@ -30,4 +61,37 @@ figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
+.cat-links,
+.tags-links {
+	margin-right: 5px;
+}
+
+.cat-links,
+.tags-links,
+.edit-link {
+	& a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #2980b9;
+	}
+}
+
+.cat-links,
+.tags-links,
+.edit-link {
+	& a:focus,
+	& a:hover {
+		border-bottom: solid 1px #2980b9;
+	}
+}
+
 @import "tables";
+
+h1.entry-title,
+h2.entry-title {
+	margin-top: 1em;
+}
+
+footer {
+	margin-top: 20px;
+}

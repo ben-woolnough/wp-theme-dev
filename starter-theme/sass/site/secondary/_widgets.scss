@@ -6,3 +6,20 @@
 		max-width: 100%;
 	}
 }
+
+/* Tag Cloud */
+.tagcloud a {
+	border: 1px solid;
+	border-radius: 2px;
+	display: inline-block;
+	line-height: 1;
+	margin: 0 2px 5px 0;
+	padding: 5px;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: #21759b;
+		outline: 0;
+	}
+}

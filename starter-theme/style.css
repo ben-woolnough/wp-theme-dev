@@ -131,6 +131,37 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+.site-info {
+	text-align: center;
+}
+
+h1.site-title,
+p.site-title {
+	margin: 10px 0 0 -2px;
+	padding: 0;
+	line-height: 1em;
+	font-size: 30px;
+	letter-spacing: 1px;
+}
+
+.site-title a {
+	margin: 0;
+}
+
+.site-title a:hover {
+	text-decoration: none;
+}
+
+.site-description {
+	font-size: 16px;
+	margin: 10px 0 0;
+	letter-spacing: 1px;
+}
+
+#masthead {
+	margin-bottom: 30px;
+}
+
 ul, ol {
 	margin: 0 0 1.5em 3em;
 }
@@ -169,9 +200,40 @@ figure {
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
+.cat-links,
+.tags-links {
+	margin-right: 5px;
+}
+
+.cat-links a,
+.tags-links a,
+.edit-link a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #2980b9;
+}
+
+.cat-links a:focus,
+.cat-links a:hover,
+.tags-links a:focus,
+.tags-links a:hover,
+.edit-link a:focus,
+.edit-link a:hover {
+	border-bottom: solid 1px #2980b9;
+}
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+h1.entry-title,
+h2.entry-title {
+	margin-top: 1em;
+}
+
+footer {
+	margin-top: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -252,6 +314,8 @@ textarea:focus {
 
 select {
 	border: 1px solid #ccc;
+	padding: 10px;
+	width: 100%;
 }
 
 textarea {
@@ -287,73 +351,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
-
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -374,6 +371,42 @@ a:hover, a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.navbar {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.dropdown-menu {
+	margin-top: 0;
+}
+
+.dropdown-toggle::after {
+	vertical-align: .150em;
+}
+
+.top,
+.top:link {
+	color: #333;
+	position: fixed;
+	z-index: 999;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	opacity: .9;
+	border: none;
+}
+
+.top:hover {
+	opacity: 1;
+	text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -484,6 +517,22 @@ a:hover, a:active {
 
 .widget select {
 	max-width: 100%;
+}
+
+/* Tag Cloud */
+.tagcloud a {
+	border: 1px solid;
+	border-radius: 2px;
+	display: inline-block;
+	line-height: 1;
+	margin: 0 2px 5px 0;
+	padding: 5px;
+}
+
+.tagcloud a:hover, .tagcloud a:focus {
+	text-decoration: none;
+	color: #21759b;
+	outline: 0;
 }
 
 /*--------------------------------------------------------------
