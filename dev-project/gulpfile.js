@@ -17,8 +17,8 @@ var gulp = require('gulp'),
     // Name of working theme folder
     root = '../' + themename + '/',
     scss = root + 'sass/',
-    js = root + 'js/',
-    srcjs = root + 'srcjs/',
+    js = root + 'dist/js/',
+    srcjs = root + 'src/js/',
     languages = root + 'languages/';
  
  
@@ -32,7 +32,7 @@ gulp.task('css', function() {
         indentWidth: '1'
     }).on('error', sass.logError))
     .pipe(postcss([
-        autoprefixer('last 2 versions', '&gt; 1%')
+        autoprefixer('last 2 versions', '> 1%')
     ]))
     .pipe(sourcemaps.write(scss + 'maps'))
     .pipe(gulp.dest(root));
